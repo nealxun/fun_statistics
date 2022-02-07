@@ -1,8 +1,8 @@
-# objective: show a scenaio of deceive p-value
+# objective: show a scenario of deceive p-value
 # reference: https://www4.stat.ncsu.edu/~stefanski/NSF_Supported/Hidden_Images/orly_owl_files/orly_owl_Lin_4p_5_flat.txt
 
 # deceive p-value
-dat <- read.table("orly_owl_Lin_4p_5_flat.txt")
+dat <- read.table("./Input/orly_owl_Lin_4p_5_flat.txt")
 pairs(dat)
 summary(lm(V1 ~ . -1, data = dat))$coef
 fit <- lm(V1 ~ . - 1, data = dat)
