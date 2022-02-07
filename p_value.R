@@ -2,9 +2,10 @@
 # reference: https://www4.stat.ncsu.edu/~stefanski/NSF_Supported/Hidden_Images/orly_owl_files/orly_owl_Lin_4p_5_flat.txt
 
 # deceive p-value
-dat <- read.table("./Input/orly_owl_Lin_4p_5_flat.txt")
-pairs(dat)
-summary(lm(V1 ~ . -1, data = dat))$coef
+#dat <- read.table("./Input/orly_owl_Lin_4p_5_flat.txt")
+dat <- read.table("https://raw.githubusercontent.com/nealxun/Fun_Stat/master/Input/orly_owl_Lin_4p_5_flat.txt")
+#pairs(dat)
+#summary(lm(V1 ~ . -1, data = dat))$coef
 fit <- lm(V1 ~ . - 1, data = dat)
 summary(fit)
 plot(predict(fit), resid(fit), pch = '.')
